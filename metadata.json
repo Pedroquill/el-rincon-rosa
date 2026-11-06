@@ -1,0 +1,6 @@
+{
+  "name": "El Rinconcito Rosa de Sofía",
+  "description": "Un oasis rosado y kawaii inspirado en Hello Kitty y adorables gatitos con mensajes de apoyo, amor y ánimo.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

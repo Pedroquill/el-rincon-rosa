@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    color: #4a2838;
+    background-color: #fff5f7;
+    overflow-x: hidden;
+    min-width: 320px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+
+  button, input, textarea {
+    outline: none;
+  }
+
+  button:focus-visible, input:focus-visible, textarea:focus-visible {
+    outline: 2px solid #f472b6;
+    outline-offset: 2px;
+  }
+}
+
+/* Hide scrollbars cleanly on mobile swipers */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Safe area padding for mobile iPhones with home bars */
+.pb-safe {
+  padding-bottom: max(env(safe-area-inset-bottom, 0px), 8px);
+}
+
+/* Custom kawaii scrollbar for desktop */
+@media (min-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #fdf2f4;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #f472b6;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ec4899;
+  }
+}
+
+/* Floating animation */
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1.5deg);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes sparkleSpin {
+  0% {
+    transform: rotate(0deg) scale(0.9);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(360deg) scale(0.9);
+  }
+}
+
+.animate-float {
+  animation: floatGentle 4s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: floatGentle 5s ease-in-out 1.5s infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+.animate-sparkle {
+  animation: sparkleSpin 8s linear infinite;
+}
+
+/* Custom soft shadows and pink tints */
+.shadow-pink-soft {
+  box-shadow: 0 8px 24px -4px rgba(244, 114, 182, 0.18), 0 3px 10px -2px rgba(244, 114, 182, 0.08);
+}
+
+.shadow-pink-hover:hover {
+  box-shadow: 0 12px 28px -4px rgba(244, 114, 182, 0.25), 0 5px 14px -2px rgba(244, 114, 182, 0.12);
+}
